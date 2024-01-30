@@ -36,6 +36,11 @@ html {
     font-family: 'DM Sans', sans-serif;
 }
 
+body{
+
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
 /* body {
     background: linear-gradient(208deg, #201E1C 16.69%, #F7931A 100%);
 } */
@@ -54,6 +59,55 @@ html {
         height: 334px;
         width: 100%;
         min-width: 320px;
+    }
+
+    .dark-mode-btns{
+        position: fixed;
+        right: 20px;
+        z-index: 1000;
+    }
+
+    .dark-mode {
+        background-color: #222; /* Cambia el color de fondo del cuerpo en modo oscuro */
+        color: #fff; /* Cambia el color del texto en modo oscuro */
+        transition: 0.5s;
+    }
+
+    .dark-mode h1{
+        color: var(--just-white);
+    }
+
+    .dark-mode .plan-section .plan-information .plan-title{
+        color: var(--just-white);
+    }
+
+    .dark-mode .plan-section a{
+        color: var(--just-white);
+    }
+
+    .dark-mode .coins-values td{
+        background-color: #222;
+        transition: 0.5s;
+    }
+
+    .dark-mode-btns button{
+        border: none;
+        background-color: transparent;
+        height: 30px;
+        width: 30px;
+    }
+
+    .dark-mode .date-time{
+        background-color: transparent;
+        box-shadow: var(--shadow);
+    }
+
+
+    .bombillo-on,
+    .bombillo-off{
+        position: absolute;
+        right: -8px;
+        width: 40px;
     }
 
     main{
@@ -299,11 +353,11 @@ html {
     }
 
     .table__bottom-left{
-        border-radius: 0 0 8px 0;
+        border-radius: 0 0 0 8px;
     }
 
     .table__bottom-right{
-        border-radius: 0 0 0 8px;
+        border-radius: 0 0 8px 0;
     }
 
     .curreny-table-container .table__right{
@@ -577,6 +631,10 @@ html {
         display: flex;
         flex-direction: row;
         align-items: center;
+    }
+
+    .choose-this h3:hover{
+        cursor: pointer;
     }
 
     footer{
